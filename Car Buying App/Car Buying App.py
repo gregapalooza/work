@@ -34,7 +34,7 @@ def save_receipt():
     #writes a save file, user opens receipt file to see updated receipt file
     text_file = open("reciept.txt", "w+")
     receipt = boxSummary.get('1.0', END)
-    write(receipt)
+    text_file.write(receipt)
     text_file.close()
     
 

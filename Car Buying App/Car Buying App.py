@@ -50,7 +50,7 @@ car_choice = StringVar()
 car_choice.set("sedan")
 
 car_choices = ["sedan", "jeep", "truck"] #car choice radiobutton
-column = 1
+column = 1 #starting position for button on GUI
 for car in car_choices:
     Radiobutton(root,
                 text = car,
@@ -58,7 +58,7 @@ for car in car_choices:
                 value = car
                 ).grid(row = 1, column = column, sticky = W)
     
-    column += 1
+    column += 1 #move extra buttons over so they don't stack on themselves
 
 engine_choiceLabel = Label(root, text = "Please choose your engine upgrade:")
 engine_choiceLabel.grid(row = 2, column = 0, columnspan = 2, sticky = W)
@@ -67,7 +67,7 @@ engine_upgrade = StringVar()
 engine_upgrade.set("large")
 
 engine_upgrades = ["large", "medium", "small"] #engine upgrade choice radiobutton
-column = 1
+column = 1 #starting position for button on GUI
 for upgrade in engine_upgrades:
     Radiobutton(root,
                 text = upgrade,
@@ -75,7 +75,7 @@ for upgrade in engine_upgrades:
                 value = upgrade
                 ).grid(row = 3, column = column, sticky = W)
 
-    column += 1
+    column += 1 #move extra buttons over so they don't stack on themselves
 
 calculateButton = Button(root, text = "Calculate", command = vehicle) #button to execute program
 calculateButton.grid(row = 4, column = 0, sticky = E)
